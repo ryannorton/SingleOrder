@@ -1,0 +1,201 @@
+body {
+  background-image: url("../../../static/img/restaurant.png");
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.navbar {
+  border-bottom: 0px solid purple;
+  background-color: #f6f8f8;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05); }
+  .navbar a.navbar-brand {
+    padding: 5px 10px; }
+  .navbar img.homeicon {
+    height: 40px; }
+  .navbar .user-nav {
+    height: 50px;
+    padding: 0 15px; }
+    .navbar .user-nav span {
+      font-size: 14px;
+      color: #444; }
+    .navbar .user-nav .helper {
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle; }
+    .navbar .user-nav img {
+      height: 40px;
+      border-radius: 100%;
+      vertical-align: middle; }
+    .navbar .user-nav .profile-pic-status {
+      background-color: #27c24c;
+      position: absolute;
+      border: 2px solid white;
+      border-radius: 100%;
+      width: 10px;
+      height: 10px;
+      bottom: 6px;
+      right: 16px; }
+    .navbar .user-nav:hover {
+      background-color: #eee; }
+
+#main-home {
+  padding-top: 20px;
+  position: relative;
+  width: 500px;
+  margin: 60px auto 0; }
+  #main-home .title {
+    text-align: center; }
+    #main-home .title h1 {
+      font-size: 80px; }
+    #main-home .title p {
+      color: #555;
+      position: absolute;
+      top: 113px;
+      right: 35px;
+      font-size: 23px; }
+  #main-home .meal-form {
+    margin-top: 90px;
+    text-align: center; }
+    #main-home .meal-form h2 {
+      font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif; }
+    #main-home .meal-form form input, #main-home .meal-form form button {
+      height: 40px;
+      background-color: white;
+      border: 1px solid #ddd;
+      outline: none; }
+      #main-home .meal-form form input.error, #main-home .meal-form form button.error {
+        background-color: #f2dede;
+        color: #a94442; }
+    #main-home .meal-form form .inputbox {
+      border-radius: 20px 0 0 20px;
+      width: 300px;
+      padding: 0;
+      font-size: 22px;
+      color: orange;
+      text-indent: 18px;
+      border-right: none; }
+    #main-home .meal-form form button {
+      color: green;
+      border-radius: 0 20px 20px 0;
+      margin: 0 0 0 -5px;
+      margin-top: -8px;
+      background-color: lightgreen;
+      font-size: 20px;
+      border-left: none; }
+  #main-home .or {
+    text-align: center;
+    color: #ccc;
+    font-size: 20px;
+    margin: 15px 0 -70px 0;
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+#main {
+  padding-top: 20px;
+  margin-top: 60px;
+  position: relative; }
+  #main .panel {
+    border: none;
+    height: 80vh;
+    overflow: scroll;
+    background-color: #fff; }
+  #main .menu .menu-section {
+    clear: both; }
+    #main .menu .menu-section .menu-section-heading {
+      background-color: #ddd;
+      padding: 3px 0;
+      text-align: center; }
+      #main .menu .menu-section .menu-section-heading h4 {
+        margin: 0; }
+    #main .menu .menu-section .menu-section-items {
+      width: 50%;
+      float: left; }
+      #main .menu .menu-section .menu-section-items button {
+        border-radius: 0;
+        background-color: white; }
+        #main .menu .menu-section .menu-section-items button span {
+          float: right; }
+        #main .menu .menu-section .menu-section-items button:hover {
+          background-color: #f6f6f6; }
+    #main .menu .menu-section .menu-section-items-left {
+      border-right: 1px solid #ddd; }
+  #main .orders-detailed table tbody tr td {
+    position: relative;
+    vertical-align: middle; }
+  #main .orders-detailed table tbody tr .person {
+    padding: 5px 8px; }
+    #main .orders-detailed table tbody tr .person img {
+      height: 40px;
+      border-radius: 100%; }
+  #main .orders-detailed table tbody tr i {
+    position: absolute;
+    background-color: #27c24c;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    right: 15px;
+    top: 21px; }
+  #main .orders-detailed table tbody tr.unpaid i {
+    background: red; }
+  #main .orders-detailed table tbody tr .price {
+    text-align: right;
+    padding-right: 20px; }
+  #main .myorder .panel {
+    border: none;
+    overflow: hidden;
+    position: relative;
+    height: 80vh; }
+    #main .myorder .panel .meal-info {
+      padding: 10px 20px; }
+      #main .myorder .panel .meal-info h4, #main .myorder .panel .meal-info p {
+        font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+        margin: 5px 0; }
+      #main .myorder .panel .meal-info p {
+        font-size: 11px;
+        margin-bottom: 0; }
+    #main .myorder .panel ul {
+      padding-left: 18px;
+      padding-right: 10px;
+      margin-top: 20px; }
+      #main .myorder .panel ul li {
+        margin: 0 0 0 17px;
+        width: 100%;
+        padding-right: 30px;
+        list-style: none;
+        min-height: 26px; }
+        #main .myorder .panel ul li span {
+          float: right; }
+        #main .myorder .panel ul li img {
+          height: 20px;
+          cursor: pointer;
+          margin-bottom: 3px;
+          margin-left: -23px;
+          margin-right: -1px; }
+    #main .myorder .panel .myorder-total {
+      position: absolute;
+      bottom: 50px;
+      right: 15px;
+      font-size: 20px; }
+    #main .myorder .panel .myorder-buttons {
+      height: 40px;
+      width: 100%;
+      position: absolute;
+      bottom: 0; }
+      #main .myorder .panel .myorder-buttons button {
+        outline: none;
+        font-size: 20px;
+        height: 100%;
+        background-color: lightgreen;
+        float: right;
+        border: none;
+        width: 50%;
+        border-radius: 0; }
+        #main .myorder .panel .myorder-buttons button.button-left {
+          background-color: #ff80ff; }
+        #main .myorder .panel .myorder-buttons button.menu-button {
+          width: 100%;
+          background-color: lightgreen; }
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin: 10px 0; }
