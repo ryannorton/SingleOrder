@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>SingleOrder</title>
+	
+    <!-- Styles -->
+	<link rel="stylesheet" href="/static/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/compiled/main.css" type="text/css" media="screen" />
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>        
+
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/">
+	    	<img src="/static/img/plate.svg" class="homeicon">
+	      </a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <div class="nav navbar-nav navbar-right">
+	      	<div class="user-nav center-block">
+	      		<span>Ryan Norton</span>
+	      		<span class="helper"></span>
+	      		<img src="static/img/profilepic.jpg">
+	      		<i class="profile-pic-status"></i>
+	      	</div>
+	      </div>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<div id="main-home">
+		<div class="title">
+			<h1>SingleOrder</h1>
+			<p>group takeout made easy</p>
+		</div>
+		<div class="meal-form">
+			<h2>Join Meal</h2>
+			<form action="/joinmeal/" method="POST">
+			{% csrf_token %}	
+				<input type="text" name="group" class='inputbox {% if messages %}error{% endif %}' {% if messages %}value="Oops! This meal doesn't exist!"{% endif %}>
+				<button type="submit" class="btn btn-default">✔</button>
+			</form>
+		</div>
+		<p class="or">- or -</p>
+		<div class="meal-form">
+			<h2>Create</h2>
+			<form action="/createmeal/" method="POST">
+			{% csrf_token %}	
+				<input type="text" name="group" class='inputbox {% if messages %}error{% endif %}' {% if messages %}value="Invalid Name. Please try again."{% endif %}>
+				<button type="submit" class="btn btn-default">✔</button>
+			</form>
+		</div>
+	</div>
+
+	<div id="footer">
+		<a href="/admin">
+			<div class="btn-group">
+				<button class="btn btn-default btn-sm" type="button">
+					Admin
+				</button>
+			</div>
+		</a>
+	</div>
+
+    <!-- Scripts -->
+    <script src="/static/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="/static/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/static/js/main.js" type="text/javascript"></script>
+</body>
+</html>
